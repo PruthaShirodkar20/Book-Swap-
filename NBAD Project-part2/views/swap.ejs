@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href= "styles.css">
+</head>    
+
+<body>
+<h1>
+<% include partials/header.ejs %>
+</h1>
+<div class="container">
+<% include partials/user-navigation.ejs %>
+
+<% include partials/site-navigation.ejs %>
+
+<div class="article">
+        <p><img src="steve-jobs.JPG" alt= "steve-jobs" height="430" width="300" style="float:left" >
+        <h1> SWAP THIS BOOK </h1>
+        <h2> STEVE JOBS </h2> <p>by Amenda Ziller </p>
+        <h2> Select an item from your available swaps </h2>
+        <input type= "radio" 
+        id="Book1"
+        checked="checked">
+        <label for ="Book1">ANNE FRANK </label>
+        <br/>
+        <br/>
+        <input type= "radio" 
+        id="Book2">
+        <label for ="Book2">SIDNEY SHELDON </label>
+ 		<br/>
+ 		<br/>
+ 		<br/>
+
+<a href="/categories"><button type="button">CONFIRM SWAP</button></a>
+</div>
+<% include partials/footer.ejs %>
+</div>
+</body>

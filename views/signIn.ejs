@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href= "styles.css">
+	<title> KNOWLEDGE EXCHANGER</title>
+</head>    
+
+<body>
+<% include partials/header.ejs %>
+<div class="container">
+<% include partials/user-navigation.ejs %>
+
+<% include partials/site-navigation.ejs %>
+
+<div class="signin">
+<% if(flg==0) {%>
+<form action="/signIn/sign?action=signin" method="POST">
+    <br>
+    USERNAME:<br>
+    <input type="text" name="emailId"><br>
+    PASSWORD:<br>
+    <input type="text" name="password"><br><br>
+    <input type="submit" value="SIGN IN" />
+</form>
+<% }%>
+<% if(flg==1) { %>
+<% include partials/success.ejs %>
+<form action="/signIn/sign?action=signin" method="POST">
+    <br>
+    USERNAME:<br>
+    <input type="text" name="emailId"><br>
+    PASSWORD:<br>
+    <input type="text" name="password"><br><br>
+    <input type="submit" value="SIGN IN" />
+</form>
+<% } %>
+<form>
+    <a href="/register">REGISTER</a>
+</form>
+<% include partials/footer.ejs %>
+</div>
+</div>
+</body>
+
+

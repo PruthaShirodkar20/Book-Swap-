@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title> KNOWLEDGE EXCHANGER</title>
+<link rel="stylesheet" href= "styles.css">
+<script>
+</script>
+</head>    
+
+<body>
+<% include partials/header.ejs %>
+<div class="container">
+<% include partials/user-navigation.ejs %>
+
+<% include partials/site-navigation.ejs %>
+
+<div class="article">
+    <form action="/register/register?action=registered" method="POST">
+    <br>
+    <br>
+    <table cellspacing="0" cellpadding="0">
+    <th>Enter details</th>
+    <tr>
+        <td>
+          First name:
+        </td>
+        <td>
+          <input type="text" name="firstname">
+          <% if(errors && errors['firstname']){ %>
+         <label class="error">
+          <%= errors['firstname'] %>
+          </label>
+            <% } %>
+        </td>
+        </tr>
+    <tr>
+        <td>
+          Last name:
+        </td>
+        <td>
+          <input type="text" name="lastname">
+          <% if(errors && errors['lastname']){ %>
+         <label class="error">
+          <%= errors['lastname'] %>
+          </label>
+            <% } %>
+        </td>
+    </tr>
+    <tr>
+         <td>
+          Username:
+        </td>
+        <td>
+          <input type="text" name="username">
+          <% if(errors && errors['username']){ %>
+         <label class="error">
+          <%= errors['username'] %>
+          </label>
+            <% } %>
+        </td>
+        <tr>
+        <td>
+          Password:
+        </td>
+        <td>
+          <input type="text" name="password">
+           <% if(errors && errors['password']){ %>
+         <label class="error">
+          <%= errors['password'] %>
+          </label>
+            <% } %>
+        </td>
+    </tr>
+    <tr>
+    <tr>
+        <td>
+          Email Address:
+        </td>
+        <td>
+          <input type="email" name="email">
+           <% if(errors && errors['email']){ %>
+         <label class="error">
+          <%= errors['email'] %>
+          </label>
+            <% } %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          Address1
+        </td>
+        <td>
+          <input type="text" name="address1">
+           <% if(errors && errors['address1']){ %>
+         <label class="error">
+          <%= errors['address1'] %>
+          </label>
+            <% } %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          Address2
+        </td>
+        <td>
+          <input type="text" name="address2">
+           <% if(errors && errors['address2']){ %>
+         <label class="error">
+          <%= errors['address2'] %>
+          </label>
+            <% } %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          City
+        </td>
+        <td>
+          <input type="text" name="city">
+           <% if(errors && errors['city']){ %>
+         <label class="error">
+          <%= errors['city'] %>
+          </label>
+            <% } %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          State
+        </td>
+        <td>
+          <input type="text" name="state">
+           <% if(errors && errors['state']){ %>
+         <label class="error">
+          <%= errors['state'] %>
+          </label>
+            <% } %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          Postal Code
+        </td>
+        <td>
+          <input type="text" name="postalCode">
+           <% if(errors && errors['postalCode']){ %>
+         <label class="error">
+          <%= errors['postalCode'] %>
+          </label>
+            <% } %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          Country
+        </td>
+        <td>
+          <input type="text" name="country">
+           <% if(errors && errors['country']){ %>
+         <label class="error">
+          <%= errors['country'] %>
+          </label>
+            <% } %>
+        </td>
+        </table>
+     <input type="submit" value="REGISTER" />
+    </form>
+
+</div>
+<% include partials/footer.ejs %>
+</div>
+</body>
+
+    

@@ -1,0 +1,194 @@
+.header,footer {
+    padding: 20px;
+    border-style: solid;
+    height: 50px;    
+}
+
+.image
+{
+  align:left;
+}
+
+.table {border: none;
+padding-left: 200px}
+
+.heading
+{
+    text-align: center;
+    margin-top: -60px;
+    font-size: 30px;
+
+}
+
+.signin
+{
+    text-align: center;
+    
+}
+.container {
+      border:none;
+      margin:auto;
+      height:85%;
+      
+  }
+
+
+.description
+{
+    display: :inline;
+}
+
+.placeholder
+{
+    text-align: right;
+    margin-top: -20px;
+    font-size: 20px;
+
+}
+
+.topnavigation 
+{
+      overflow: hidden;
+      background-color: black;
+      margin-top: -24px;
+      padding-left: 0px; 
+}
+
+.topnavigation a 
+{
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  padding-left: 200px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnavigation a:hover{
+    background-color: #006400;
+}
+
+
+.article
+{
+    font-family: "oblique";
+    text-align: left;
+    padding-top: 5px;
+    font-size: 15px;
+    margin-top: -20px;
+}
+
+.article button
+{
+    width: 8%;
+    height:8%;
+}
+
+.article th{
+    font-size: 30px;
+}
+
+.article h2
+{
+    color:black;
+}
+
+.article p1
+{
+    color:black;
+    font-size: 15px;
+    font-family: "arial";
+   
+}
+
+.article h1
+{
+    color:black;
+}
+
+.footer1 {
+    margin-left: 6 px;
+    margin-right: 6 px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 99.5%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    word-spacing: 200px;
+
+}
+
+.med-button button
+{
+    width: 100%;
+    height:20%;
+   
+}
+
+.medium-button button
+{
+    width: 100%;
+    height:30%;
+   
+}
+
+.fa fa-star checked
+{
+    color:orange;
+}
+
+.th,td
+{
+    padding: 80px;
+}
+
+
+
+.figure
+{
+    padding-left: 0px;
+}
+
+.figure-caption
+{
+    font-size: 5px;
+}
+
+
+.sidenavigation{
+    height: 500px;
+	width:10%;
+	background-color:#333;
+    text-align: left;
+    padding:10px;
+    float:right;
+}
+
+.sidenavigation a 
+{
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.sidenavigation a:hover{
+    background-color: #006400;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    text-align: center;
+}
+
+
+
+
+
+

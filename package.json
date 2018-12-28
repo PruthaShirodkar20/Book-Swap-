@@ -1,0 +1,29 @@
+{
+  "name": "nbad-project-part2",
+  "version": "1.0.0",
+  "main": "ItemDB.js",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-sanitizer": "^1.0.4",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.0",
+    "http": "^0.0.0",
+    "mongo-sanitize": "^1.0.1",
+    "mongodb": "^2.2.33",
+    "mongodb-autoincrement": "^1.0.1",
+    "node": "^10.11.0",
+    "nodemon": "^1.18.4",
+    "sudo": "^1.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

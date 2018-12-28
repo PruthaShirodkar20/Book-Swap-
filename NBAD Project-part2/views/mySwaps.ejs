@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title> KNOWLEDGE EXCHANGER</title>
+<link rel="stylesheet" href= "styles.css">
+<script>
+
+
+</script>
+</head>    
+
+<body>
+<% include partials/header.ejs %>
+<div class="container">
+<% include partials/user-navigation.ejs %>
+
+<% include partials/site-navigation.ejs %>
+
+<div>
+	<h1>CHARLOTTE SWAP OFFERS</h1>
+	<table>
+
+		<tr><th>   BOOK</th>
+			<th>SWAP OFFER</th>
+			<th></th></tr>
+		<% for(var i=0; i < swapdt.userItems.length; i++) { %>	
+        <% if(swapdt.userItems[i].status==="pending") {%>
+		<tr>
+			<td>	<%= swapdt.userItems[i].item.itemName%> </td>
+			<td>    <%= swapdt.userItems[i].swapItem.itemName %> </td>
+			<td><a href=<%= "/mySwaps/swp?action=accept&bookid="+swapdt.userItems[i].item.itemCode+"&swpbkid="+swapdt.userItems[i].swapItem.itemCode%> /><button type="button" >ACCEPT </button></a></td>
+			<td><a href="/mySwaps/swp?action=reject&bookid=${swapdt.userItems[i].item.itemCode}&swpbkid=${swapdt.userItems[i].swapitem.itemCode}"><button type="button">REJECT </button></a></td>
+		</tr>
+		<% } }%>
+		
+	</table>
+</div>
+<% include partials/footer.ejs %>
+</div>
+</body>

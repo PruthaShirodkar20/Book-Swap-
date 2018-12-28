@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title> KNOWLEDGE EXCHANGER</title>
+<link rel="stylesheet" href= "styles.css">
+<script>
+</script>
+</head>    
+
+<body>
+<% include partials/header.ejs %>
+<div class="container">
+<% include partials/user-navigation.ejs %>
+
+<% include partials/site-navigation.ejs %>
+
+<div>
+	<h1>CHARLOTTE SWAP OFFERS</h1>
+	<table>
+
+		<tr><th>   BOOK</th>
+            
+			<th>SWAP OFFER</th>
+			<th></th></tr>
+        
+        <% if(userdt.status=="Pending") {%>
+		<tr>
+            
+            <td>	<%= userdt.item.itemName%> </td>
+            <td>    <%= userdt.swapitem[0].itemName%>  </td>
+
+            <td><button type="button" >ACCEPT </button></td>
+            <td><button type="button" >REJECT </button></td>
+		</tr>
+        <% } if(swapdt.status=="Offered") {%>
+		<tr>
+            
+			<td>	<%= userdt.item.itemName%> </td>
+			<td>    <%=  userdt.swapitem[0].itemNam %> </td>
+            
+                <td><button type="button" >ACCEPT </button></td>
+            <td><button type="button" >REJECT </button></td>
+
+		</tr>
+		<% }%>
+		
+	</table>
+</div>
+<% include partials/footer.ejs %>
+</div>
+</body>

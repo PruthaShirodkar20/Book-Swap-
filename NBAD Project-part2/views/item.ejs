@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+<link rel="stylesheet" href= "styles.css">
+</head>    
+
+<body>
+<h1>
+<% include partials/header.ejs %>
+</h1>
+<div class="container">
+<% include partials/user-navigation.ejs %>
+
+<% include partials/site-navigation.ejs %>
+
+<div class="article">
+       <img src= <%= books.imageUrl %> alt="image" width="300" height="430"  style="float: left;">
+              <p><%= books.description %> </p> <p><h1>  <%= books.itemName %> </h1>
+<a href="/swap"><button type="button">SWAP IT </button></a>
+<a href="/myItems"><button type="button">RATE IT</button></a>
+
+<!-- <p> <strong>ONLY A SELECT FEW INDIVIDUALS CAN CLAIM TO HAVE CHANGED THE WORLD. STEVE JOBS IS ONE OF THESE.</strong></p>
+           <p> <br/><pre> THE MYTHOLOGY AROUND THE MAN IS SO STRONG THAT EVEN SIX YEARS AFTER HIS DEATH HE STILL DOMINATES ONLINE 
+ DISCUSSION. WITH  HIS PASSING, WE HAVE LOST ONE OF THE GREATEST INNOVATORS OF OUR TIME.JOBS WASN'T JUST A 
+ SUCCESSFUL BUSINESSMAN, HE WAS A VISIONARY WHO MADE IT HIS MISSION TO HUMANIZE PERSONAL COMPUTING, 
+ REWRITING THE RULES OF USER EXPERIENCE DESIGN, HARDWARE DESIGN AND SOFTWARE DESIGN.HIS ACTIONS ECHOED 
+ ACROSS INDUSTRY LINES: HE SHOOK UP THE MUSIC BUSINESS, PROVIDED THE VISION BEHIND PIXAR AND FOREVER ALTERED 
+ THE WAY WE EXPERIENCE COMPUTING.ALONG THE WAY, HE BUILT APPLE UP INTO ONE OF THE MOST VALUABLE CORPORATIONS 
+ IN THE WORLD.
+            <br/> THIS BOOK TAKES A LOOK AT HIS LIFE. THE AIM OF THIS BOOK IS TO BE EDUCATIONAL AND INSPIRATIONAL WITH 
+ ACTIONABLE PRINCIPLES YOU CAN INCORPORATE INTO YOUR OWN LIFE STRAIGHT FROM THE GREAT MAN HIMSELF. </pre> -->
+ 
+             <!--  <img src="steve-jobs.JPG" alt= "steve-jobs" height="430" width="300" style="float:left" > -->
+
+<a href="/categories"><button type="button">BACK</button></a>
+</div>
+
+<% include partials/footer.ejs %>
+</div>
+</body>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> KNOWLEDGE EXCHANGER</title>
+<link rel="stylesheet" href= "styles.css">
+</head>    
+
+<body>
+<% include partials/header.ejs %>
+<div class="container">
+<% include partials/user-navigation.ejs %>
+<% include partials/site-navigation.ejs %>
+<div class="article">
+            <h1> NON-FICTION </h1>
+                <a href="/item?itemCode=10001">
+                <figure>
+                    <img src="anne-frank.jpg"  alt="Anne-Frank" width="100" height="100" style="float: left;margin: 0 30px;">
+                </figure>
+                </a>
+                <a href="/item?itemCode=10002">
+                <figure>
+                    <img src="a-night-to-remember.jpg"  alt="A Night To Remember" width="100" height="100" style="float: left;margin: 0 30px;">
+                </figure>
+                </a>
+                <a href="/item?itemCode=10005">
+                <figure>
+                    <img src="the-sea-inside.jpg" alt="The Sea Inside" width="100" height="100" style="float: left;margin: 0 30px;">
+                </figure> 
+                </a>
+                <a href="/item?itemCode=10003">
+                <figure>
+                    <img src="steve-jobs.JPG" alt="Steve Jobs" width="100" height="100" style="float: left;margin: 0 30px;" >
+                </figure> 
+                </a>
+                <a href="/item?itemCode=10004">
+                <figure>
+                    <img src="martin-luther.jpg" alt="Martin Luther King" width="100" height="100" style="float: left;margin: 0 30px;">
+                </figure> 
+                </a>
+            
+            <br/><br/><br/><br/><br/><br/>
+            <h1> FICTION </h1>
+               
+                <a href="/item?itemCode=20001">
+                <figure>
+                    <img src="harry-potter.jpg" alt="Harry Potter" width="100" height="100" style="float: left;margin: 0 30px;" >
+                </figure>
+                </a>
+                <a href="/item?itemCode=20004">
+                <figure>
+                    <img src="morning-noon-night.jpg" alt="Morning Noon Night" width="100" height="100" style="float: left;margin: 0 30px;" >
+                </figure>
+                </a>
+                <a href="/item?itemCode=20003">
+                <figure>
+                    <img src="midnight.jpg" alt="Memories of Midnight" width="100" height="100" style="float: left;margin: 0 30px;" >
+                </figure> 
+                </a>
+                <a href="/item?itemCode=20005">
+                <figure>
+                    <img src="if-tomorrow-comes.jpg" alt="If tomorrow Comes" width="100" height="100" style="float: left;margin: 0 30px;" >
+                </figure> 
+                </a>
+                <a href="/item?itemCode=20002">
+                <figure>
+                    <img src="goose-bumps.jpg" alt="Goose Bumps" width="100" height="100" style="float: left;margin: 0 30px;" >
+                </figure> 
+                </a>
+                 
+            
+</div>
+</div>
+<% include partials/footer.ejs %>
+</body>
+</html>

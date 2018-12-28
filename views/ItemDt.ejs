@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> KNOWLEDGE EXCHANGER</title>
+<link rel="stylesheet" href= "styles.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>    
+
+<body>
+<% include partials/header.ejs %>
+<div class="container">
+<% include partials/user-navigation.ejs %>
+<% include partials/site-navigation.ejs %>
+<div class="article">
+<br>
+<br>
+<br>    
+        <form action="/myItems?action=offer&itemCode= <%= books[0].itemCode %>" method="POST">
+        <table>
+        <tr>
+            <h1><%= books[0].itemName %></h1>
+        </tr>
+        <tr>
+            <h2>(<%= books[0].catalogCategory %>)</h2>
+            <h2><%= books[0].description %></h2>
+        </tr>
+        <tr>
+        <img src="<%= books[0].imageUrl %>" alt="pacman" width="140" height="140" class="img-rounded"></tr>
+        <tr>
+            <tr>SWAP WITH</tr>
+        <select name='itemSelected'>
+        <% for(let i=0;i< userdt.length;i++){%>
+        <option value="<%= userdt[i].userItems.itemCode %>"><%= userdt[i].userItems.itemName %></option>
+        <% } %> 
+        </select>
+        </tr>
+        </table>
+         <input type="submit" class="btn btn-primary" value="Confirm">
+</div>
+</div>
+<% include partials/footer.ejs %>
+</body>
+</html>

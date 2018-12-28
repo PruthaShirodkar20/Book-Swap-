@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> KNOWLEDGE EXCHANGER</title>
+<link rel="stylesheet" href= "styles.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>    
+
+<body>
+<% include partials/header.ejs %>
+<div class="container">
+<% include partials/user-navigation.ejs %>
+<% include partials/site-navigation.ejs %>
+<div class="article">
+        <br>
+        <table>
+        <tr>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Rating</th>
+            <th>Swapped</th>
+            <th>Update/Delete</th>
+        </tr>
+        <% for (i=0;i<itemdata.userItems.length;i++) { %>
+        <tr>
+            <td><%= itemdata.userItems[i].item.itemName %></td>
+            <td><%= itemdata.userItems[i].item.catalogCategory %></td>
+            <td> <% for(r=0;r<itemdata.userItems[i].rating;r++){ %>
+               <div class="fa fa-star checked"></div>
+             <% } %>
+            </td>
+            <td><% if(itemdata.userItems[i].status=="pending") {%>
+                    <i class="fa fa-refresh"></i>
+                      <% } else if(itemdata.userItems[i].status === 'swapped'){ %>
+                      <i class="fa fa-check"></i>
+                      <% } else { }%>
+            </td>                        
+            <td><div class="med-button"><a href="<%= "/myItems?action=update&bookid="+itemdata.userItems[i].item.itemCode %>">       
+                <button type="button"> UPDATE </button></a></div>
+               <div class="med-button"><a href="<%= "/myItems?action=delete&bookid="+itemdata.userItems[i].item.itemCode %>">       
+                <button type="button"> DELETE </button></a></div>
+            </td>
+            </tr>
+        
+        <% } %>
+
+        </table>
+
+       </div>
+</div>
+<% include partials/footer.ejs %>
+</body>
+</html>
